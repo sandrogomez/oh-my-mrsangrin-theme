@@ -1,5 +1,3 @@
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-
 if [ -e ~/.rvm/bin/rvm-prompt ]; then
   PROMPT='%{$fg_bold[cyan]%}%~%{$reset_color%} %{$fg[green]%}‹$(~/.rvm/bin/rvm-prompt i v)› %{$reset_color%} $(git_prompt_info)%{$reset_color%}%B$%b '
 else
@@ -9,5 +7,5 @@ else
 fi
 RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}‹"
+ZSH_THEME_GIT_PROMPT_SUFFIX="›%{$reset_color%}"
